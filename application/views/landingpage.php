@@ -24,6 +24,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 <body>
 	<?php
+	include_once("modal.php");
 	include_once("navbar.php");
 	?>
     <div class="container mt-3">
