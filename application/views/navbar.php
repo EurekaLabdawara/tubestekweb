@@ -35,7 +35,7 @@
 	<a class="btn btn-outline-success my-2 my-sm-0 mx-1" href="#">
 	<i class="fas fa-shopping-cart"></i>
 	 </a>
-	<a class="btn btn-outline-success my-2 my-sm-0 mx-5" style="float:right;" href="#">Login / Register</a>
+	<a class="btn btn-outline-success my-2 my-sm-0 mx-5" style="float:right;" data-toggle="modal" data-target="#exampleModal">Login / Register</a>
 
   </div>
 
