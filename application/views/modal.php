@@ -71,7 +71,7 @@
                         <div class="alert alert-danger" id="confirmmessagedanger" role="alert">Konfirmasi kata sandi
                             tidak sama dengan kata sandi</div>
 
-                        <button type="submit" class="btn btn-primary">Daftar</button>
+                        <button id="btnsubmitdaftar" type="submit" class="btn btn-primary">Daftar</button>
                     </form>
                 </div>
             </div>
@@ -99,8 +99,10 @@ $(document).ready(function() {
     $('#exampleInputConfirmPassword1').on('keyup', function() {
         if ($('#exampleInputPassword2').val() === $('#exampleInputConfirmPassword1').val()) {
             $('#confirmmessagedanger').attr('hidden', true);
+            $('#btnsubmitdaftar').removeAttr('disabled');
         } else {
             $('#confirmmessagedanger').removeAttr('hidden');
+            $('#btnsubmitdaftar').attr('disabled', true);
         }
     });
 });
