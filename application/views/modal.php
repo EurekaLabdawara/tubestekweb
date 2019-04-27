@@ -15,22 +15,22 @@
             </div>
             <div class="modal-body">
                 <div id="masuk">
-                    <form>
+                    <form action ="<?php echo base_url()?>Auth/login" method="post">
                         <div class="form-group">
                             <label for="exampleInputEmail1">Alamat Email</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="emailHelp" placeholder="Masukkan email">
+                            <input name="email" type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Masukkan email" required>
                             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
                                 else.</small>
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">Kata sandi</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1"
-                                placeholder="Masukkan kata sandi">
+                            <input name="password" type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="Masukkan kata sandi" required>
                         </div>
 
                         <div class="form-group form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <input name="remember" type="checkbox" class="form-check-input" id="exampleCheck1">
                             <label class="form-check-label" for="exampleCheck1">Ingat Saya</label>
                         </div>
                         <button type="submit" class="btn btn-primary">Masuk</button>

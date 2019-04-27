@@ -2,12 +2,12 @@
 class AuthModel extends CI_Model
 {
 
-    public function get_user()
+    public function get_user($email)
     {
         //mengambil semua data post yang ada di table post
-
-        // $query = $this->db->get('posts');
-        // return $query->result();
+		$this->db->select('email, password');
+        $query = $this->db->get_where('users', array ('email' => $email), 1));
+        return $query->result();
     }
 
     public function create_user($input)
