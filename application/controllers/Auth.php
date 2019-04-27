@@ -28,31 +28,36 @@ class Auth extends CI_Controller
     public function login()
     {
         //function untuk pengecekan login
-		$input = $this->input->post();
-		$this->load->model('AuthModel');
-		$email = $input['email'];
-		$check = $this->AuthModel->get_user($email);
-		//print_r($check);
-		if($check){
-			if ($input['password']===$check[0]->password){
-			print_r("Anda telah masuk");			
-			}
-			else{
-		print_r("Email atau Password anda salah");	
-		}
-		}
-		else{
-		print_r("Email atau Password anda salah");	
-		}
-	}
+        $input = html_escape($this->input->post());
+        // print_r($input);
+        $this->load->model('AuthModel');
+        $email = $input['email'];
+        // print_r($email);
+        $check = $this->AuthModel->get_user($email);
+        // print_r($check);
+
+        if ($check) {
+            if ($input['password'] == $check[0]->password) {
+                print_r("Anda telah masuk");
+            } else {
+                print_r("Email atau Password anda salah");
+            }
+        } else {
+            print_r("Email atau Password anda salah");
+        }
+    }
 
     public function register()
     {
         //function untuk registrasi
-		
-		$input = $this->input->post();
-		$this->load->model('AuthModel');
-		$this->AuthModel->create_user($input);
-		redirect(base_url());
-	}
+
+        $input = html_escape($this->input->post());
+        // print_r($input);
+        $this->load->model('AuthModel');
+        $this->AuthModel->create_user($input);
+        redirect(base_url());
+    }
+
+    public function logout()
+    { }
 }
