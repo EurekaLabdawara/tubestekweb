@@ -32,7 +32,18 @@ class Auth extends CI_Controller
 		$this->load->model('AuthModel');
 		$email = $input['email'];
 		$check = $this->AuthModel->get_user($email);
-		print_r($check);
+		//print_r($check);
+		if($check){
+			if ($input['password']===$check[0]->password){
+			print_r("Anda telah masuk");			
+			}
+			else{
+		print_r("Email atau Password anda salah");	
+		}
+		}
+		else{
+		print_r("Email atau Password anda salah");	
+		}
 	}
 
     public function register()
