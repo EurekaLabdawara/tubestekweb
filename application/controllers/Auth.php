@@ -28,7 +28,8 @@ class Auth extends CI_Controller
     public function login()
     {
         //function untuk pengecekan login
-    }
+		print_r("This is Login");
+	}
 
     public function register()
     {
