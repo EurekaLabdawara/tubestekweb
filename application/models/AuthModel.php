@@ -6,7 +6,7 @@ class AuthModel extends CI_Model
     {
         //mengambil semua data post yang ada di table post
 		$this->db->select('email, password');
-        $query = $this->db->get_where('users', array ('email' => $email), 1));
+        $query = $this->db->get_where('users', array ('email' => $email), 1);
         return $query->result();
     }
 

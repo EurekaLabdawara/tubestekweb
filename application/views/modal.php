@@ -18,7 +18,7 @@
                     <form action="<?php echo base_url() ?>Auth/login" method="post">
                         <div class="form-group">
                             <label for="exampleInputEmail1">Alamat Email</label>
-                            <input name="emaillogin" type="email" class="form-control" id="exampleInputEmail1"
+                            <input name="email" type="email" class="form-control" id="exampleInputEmail1"
                                 aria-describedby="emailHelp" placeholder="Masukkan email" required>
                             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
                                 else.</small>

@@ -28,7 +28,11 @@ class Auth extends CI_Controller
     public function login()
     {
         //function untuk pengecekan login
-		print_r("This is Login");
+		$input = $this->input->post();
+		$this->load->model('AuthModel');
+		$email = $input['email'];
+		$check = $this->AuthModel->get_user($email);
+		print_r($check);
 	}
 
     public function register()
