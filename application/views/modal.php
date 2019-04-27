@@ -15,10 +15,10 @@
             </div>
             <div class="modal-body">
                 <div id="masuk">
-                    <form action ="<?php echo base_url()?>Auth/login" method="post">
+                    <form action="<?php echo base_url() ?>Auth/login" method="post">
                         <div class="form-group">
                             <label for="exampleInputEmail1">Alamat Email</label>
-                            <input name="email" type="email" class="form-control" id="exampleInputEmail1"
+                            <input name="emaillogin" type="email" class="form-control" id="exampleInputEmail1"
                                 aria-describedby="emailHelp" placeholder="Masukkan email" required>
                             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
                                 else.</small>
@@ -37,11 +37,11 @@
                     </form>
                 </div>
                 <div id="daftar" hidden>
-                    <form action="<?php echo base_url()?>Auth/register" method="post">
+                    <form action="<?php echo base_url() ?>Auth/register" method="post">
                         <div class="form-group">
                             <label for="exampleInputNama">Nama lengkap</label>
-                            <input name="text" name="nama" class="form-control" id="exampleInputNama" aria-describedby="namaHelp"
-                                placeholder="Masukkan nama">
+                            <input name="text" name="nama" class="form-control" id="exampleInputNama"
+                                aria-describedby="namaHelp" placeholder="Masukkan nama">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputUsername">Username</label>
@@ -49,25 +49,28 @@
                                 aria-describedby="usernameHelp" placeholder="Masukkan username">
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Alamat Email</label>
-                            <input name="email" type="email" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="emailHelp" placeholder="Masukkan email"required>
+                            <label for="exampleInputEmail2">Alamat Email</label>
+                            <input name="emailregis" type="email" class="form-control" id="exampleInputEmail2"
+                                aria-describedby="emailHelp" placeholder="Masukkan email" required>
                         </div>
                         <div class="form-group">
                             <label for="exampleInputNoHP">Nomor HP</label>
-                            <input type="text" name="nohp" class="form-control" id="exampleInputNoHP" aria-describedby="nohpHelp"
-                                placeholder="Masukkan no hp"required>
+                            <input type="text" name="nohp" class="form-control" id="exampleInputNoHP"
+                                aria-describedby="nohpHelp" placeholder="Masukkan no hp" required>
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputPassword1">Kata sandi</label>
-                            <input type="password" name="password" class="form-control" id="exampleInputPassword1"
-                                placeholder="Masukkan kata sandi"required>
+                            <label for="exampleInputPassword2">Kata sandi</label>
+                            <input type="password" name="password" class="form-control" id="exampleInputPassword2"
+                                placeholder="Masukkan kata sandi" required>
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputPassword1">Konfirmasi kata sandi</label>
-                            <input type="password" name="confirmpassword" class="form-control" id="exampleInputPassword1"
-                                placeholder="Konfirmasi kata sandi">
+                            <label for="exampleInputConfirmPassword1">Konfirmasi kata sandi</label>
+                            <input type="password" name="confirmpassword" class="form-control"
+                                id="exampleInputConfirmPassword1" placeholder="Konfirmasi kata sandi">
                         </div>
+                        <div class="alert alert-danger" id="confirmmessagedanger" role="alert">Konfirmasi kata sandi
+                            tidak sama dengan kata sandi</div>
+
                         <button type="submit" class="btn btn-primary">Daftar</button>
                     </form>
                 </div>
@@ -90,6 +93,15 @@ $(document).ready(function() {
         $('#daftar').removeAttr('hidden');
         $('#btnmasuk').removeClass('active');
         $('#btndaftar').addClass('active');
+    });
+    $('#confirmmessagedanger').attr('hidden', true);
+
+    $('#exampleInputConfirmPassword1').on('keyup', function() {
+        if ($('#exampleInputPassword2').val() === $('#exampleInputConfirmPassword1').val()) {
+            $('#confirmmessagedanger').attr('hidden', true);
+        } else {
+            $('#confirmmessagedanger').removeAttr('hidden');
+        }
     });
 });
 </script>
