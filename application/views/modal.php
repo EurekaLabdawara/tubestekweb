@@ -40,18 +40,23 @@
                     <form action="<?php echo base_url() ?>Auth/register" method="post">
                         <div class="form-group">
                             <label for="exampleInputNama">Nama lengkap</label>
-                            <input name="text" name="nama" class="form-control" id="exampleInputNama"
+                            <input type="text" name="namaLengkap" class="form-control" id="exampleInputNama"
                                 aria-describedby="namaHelp" placeholder="Masukkan nama">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputUsername">Username</label>
-                            <input name="text" name="username" class="form-control" id="exampleInputUsername"
+                            <input type="text" name="username" class="form-control" id="exampleInputUsername"
                                 aria-describedby="usernameHelp" placeholder="Masukkan username">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail2">Alamat Email</label>
-                            <input name="emailregis" type="email" class="form-control" id="exampleInputEmail2"
+                            <input name="email" type="email" class="form-control" id="exampleInputEmail2"
                                 aria-describedby="emailHelp" placeholder="Masukkan email" required>
+                        </div>
+						 <div class="form-group">
+                            <label for="exampleInputAlamat">Alamat Rumah</label>
+                            <input type="text" name="alamat" class="form-control" id="exampleInputAlamat"
+                                aria-describedby="alamatHelp" placeholder="Masukkan alamat" required>
                         </div>
                         <div class="form-group">
                             <label for="exampleInputNoHP">Nomor HP</label>
@@ -65,7 +70,7 @@
                         </div>
                         <div class="form-group">
                             <label for="exampleInputConfirmPassword1">Konfirmasi kata sandi</label>
-                            <input type="password" name="confirmpassword" class="form-control"
+                            <input type="password" class="form-control"
                                 id="exampleInputConfirmPassword1" placeholder="Konfirmasi kata sandi">
                         </div>
                         <div class="alert alert-danger" id="confirmmessagedanger" role="alert">Konfirmasi kata sandi
