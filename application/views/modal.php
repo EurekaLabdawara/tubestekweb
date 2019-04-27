@@ -37,35 +37,35 @@
                     </form>
                 </div>
                 <div id="daftar" hidden>
-                    <form>
+                    <form action="<?php echo base_url()?>Auth/register" method="post">
                         <div class="form-group">
                             <label for="exampleInputNama">Nama lengkap</label>
-                            <input type="nama" class="form-control" id="exampleInputNama" aria-describedby="namaHelp"
+                            <input name="text" name="nama" class="form-control" id="exampleInputNama" aria-describedby="namaHelp"
                                 placeholder="Masukkan nama">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputUsername">Username</label>
-                            <input type="username" class="form-control" id="exampleInputUsername"
+                            <input name="text" name="username" class="form-control" id="exampleInputUsername"
                                 aria-describedby="usernameHelp" placeholder="Masukkan username">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Alamat Email</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="emailHelp" placeholder="Masukkan email">
+                            <input name="email" type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Masukkan email"required>
                         </div>
                         <div class="form-group">
                             <label for="exampleInputNoHP">Nomor HP</label>
-                            <input type="nohp" class="form-control" id="exampleInputNoHP" aria-describedby="nohpHelp"
-                                placeholder="Masukkan no hp">
+                            <input type="text" name="nohp" class="form-control" id="exampleInputNoHP" aria-describedby="nohpHelp"
+                                placeholder="Masukkan no hp"required>
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">Kata sandi</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1"
-                                placeholder="Masukkan kata sandi">
+                            <input type="password" name="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="Masukkan kata sandi"required>
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">Konfirmasi kata sandi</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1"
+                            <input type="password" name="confirmpassword" class="form-control" id="exampleInputPassword1"
                                 placeholder="Konfirmasi kata sandi">
                         </div>
                         <button type="submit" class="btn btn-primary">Daftar</button>

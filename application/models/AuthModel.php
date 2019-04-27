@@ -10,10 +10,10 @@ class AuthModel extends CI_Model
         // return $query->result();
     }
 
-    public function create_user()
+    public function create_user($input)
     {
         //membuat data post baru 
-        // $this->db->insert('posts', $input);
+         $this->db->insert('users', $input);
     }
 
     public function update_user($input)
