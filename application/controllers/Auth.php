@@ -52,10 +52,20 @@ class Auth extends CI_Controller
                 // print_r($this->session->userdata());
                 redirect(base_url());
             } else {
-                print_r("Email atau Password anda salah2");
+                echo "<script>
+                var r = confirm('Email atau Password anda salah');
+                if (r == true) {
+                    window.location.assign('" . base_url() . "');
+                }
+                </script>";
             }
         } else {
-            print_r("Email atau Password anda salah1");
+            echo "<script>
+                var r = confirm('Email atau Password anda salah');
+                if (r == true) {
+                    window.location.assign('" . base_url() . "');
+                }
+                </script>";
         }
     }
 
@@ -68,8 +78,13 @@ class Auth extends CI_Controller
         // print_r($input);
         $this->load->model('AuthModel');
         $this->AuthModel->create_user($input);
-        echo "<script>alert('Silahkan masuk dengan menggunakan akun baru anda!');<script>";
-        redirect(base_url());
+        $_POST['register'] = 'success';
+        echo "<script>
+            var r = confirm('Registrasi Berhasil!\nSilahkan masuk dengan menggunakan akun baru anda!');<script>');
+            if (r == true) {
+                window.location.assign('" . base_url() . "');
+            }
+            </script>";
     }
 
     public function logout()
