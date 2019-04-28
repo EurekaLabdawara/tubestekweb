@@ -23,7 +23,7 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a id="btnKatCaseHP" class="dropdown-item">Case Handphone</a>
-                    <a id="btnKatBaju" class="dropdown-item">Custom Baju</a>
+                    <a id="btnKatBaju" class="dropdown-item">Baju</a>
                 </div>
             </li>
         </ul>
@@ -53,6 +53,15 @@
                 <div class="dropdown-menu" aria-labelledby="rightnavbarDropdown">
                     <a href="" class="dropdown-item">Pembelian</a>
                     <a href="" class="dropdown-item">Wishlist</a>
+                    <?php
+                        if ($this->session->userdata('vendorID') === null) { ?>
+                    <a href="" class="dropdown-item">Mulai Berjualan</a>
+                    <?php
+                    } else { ?>
+                    <a href="" class="dropdown-item">Toko Saya</a>
+                    <?php
+                    }
+                    ?>
                     <a href="" class="dropdown-item">Pengaturan</a>
                     <a href="<?php echo base_url() ?>Auth/logout" class="dropdown-item">Keluar</a>
                 </div>
