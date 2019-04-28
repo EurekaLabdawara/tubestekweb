@@ -38,7 +38,7 @@ class Auth extends CI_Controller
         // print_r($check);
 
         if ($check) {
-            if ($input['password'] === $check[0]->password) {
+            if (sha1($input['password']) === $check[0]->password) {
                 print_r("Anda telah masuk");
                 $user = $this->AuthModel->get_user($email)[0];
                 // print_r($user);
@@ -64,6 +64,7 @@ class Auth extends CI_Controller
         //function untuk registrasi
 
         $input = html_escape($this->input->post());
+        $input['password'] = sha1($input['password']);
         // print_r($input);
         $this->load->model('AuthModel');
         $this->AuthModel->create_user($input);
