@@ -25,12 +25,4 @@ class SeedModel extends CI_Model
         // $this->db->where('idPost', $input['id']);
         // $this->db->update('posts');
     }
-
-    public function delete_user($id)
-    {
-        // menghapus post yang dipilih
-
-        // $this->db->where('idPost', $id);
-        // $this->db->delete('posts');
-    }
 }

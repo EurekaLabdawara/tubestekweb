@@ -22,6 +22,7 @@ class Auth extends CI_Controller
     public function index()
     {
         //function untuk masuk ke landing page
+        // print_r($this->session->userdata());
         $this->load->view('landingpage');
     }
 
@@ -48,7 +49,8 @@ class Auth extends CI_Controller
                 $this->session->alamat = $user->alamat;
                 $this->session->nohp = $user->nohp;
                 $this->session->profPic = $user->profPic;
-                print_r($this->session->userdata());
+                // print_r($this->session->userdata());
+                redirect(base_url());
             } else {
                 print_r("Email atau Password anda salah2");
             }

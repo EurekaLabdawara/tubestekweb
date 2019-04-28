@@ -38,8 +38,30 @@
         <a class="btn btn-outline-success my-2 my-sm-0 mx-1" href="#">
             <i class="fas fa-shopping-cart"></i>
         </a>
+        <?php
+        if ($this->session->userdata('email') === null) { ?>
         <button class="btn btn-outline-success my-2 my-sm-0 mx-5" style="float:right;" data-toggle="modal"
             data-target="#exampleModal">Login / Register</button>
+        <?php
+    } else { ?>
+        <ul class="navbar-nav my-2 my-sm-2 mx-5">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="rightnavbarDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <?php echo $this->session->userdata('namaLengkap') ?>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="rightnavbarDropdown">
+                    <a href="" class="dropdown-item">Pembelian</a>
+                    <a href="" class="dropdown-item">Wishlist</a>
+                    <a href="" class="dropdown-item">Pengaturan</a>
+                    <a href="<?php echo base_url() ?>Auth/logout" class="dropdown-item">Keluar</a>
+                </div>
+            </li>
+        </ul>
+        <?php
+    }
+    ?>
+
     </div>
 
 </nav>
