@@ -36,6 +36,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 <body>
     <?php
+  if ($this->session->userdata('email') !== null) {
+    if ($this->session->userdata('vendorID') === null) {
+      include_once("modal_bikintoko.php");
+    }
+  }
   include_once("modal.php");
   include_once("navbar.php");
   ?>

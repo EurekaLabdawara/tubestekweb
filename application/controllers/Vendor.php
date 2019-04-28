@@ -25,11 +25,6 @@ class Vendor extends CI_Controller
         $this->load->view('Vendor/dashboard');
     }
 
-    public function ViewCreateVendor()
-    {
-        # code...
-    }
-
     public function Create()
     {
         //function untuk menmbuat / inisialisasi vendor/toko
