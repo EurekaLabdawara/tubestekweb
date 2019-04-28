@@ -33,17 +33,27 @@ class Auth extends CI_Controller
         $this->load->model('AuthModel');
         $email = $input['email'];
         // print_r($email);
-        $check = $this->AuthModel->get_user($email);
+        $check = $this->AuthModel->check_user($email);
         // print_r($check);
 
         if ($check) {
-            if ($input['password'] == $check[0]->password) {
+            if ($input['password'] === $check[0]->password) {
                 print_r("Anda telah masuk");
+                $user = $this->AuthModel->get_user($email)[0];
+                // print_r($user);
+                $this->session->email = $user->email;
+                $this->session->namaLengkap = $user->namaLengkap;
+                $this->session->username = $user->username;
+                $this->session->vendorID = $user->vendorID;
+                $this->session->alamat = $user->alamat;
+                $this->session->nohp = $user->nohp;
+                $this->session->profPic = $user->profPic;
+                print_r($this->session->userdata());
             } else {
-                print_r("Email atau Password anda salah");
+                print_r("Email atau Password anda salah2");
             }
         } else {
-            print_r("Email atau Password anda salah");
+            print_r("Email atau Password anda salah1");
         }
     }
 
@@ -55,9 +65,13 @@ class Auth extends CI_Controller
         // print_r($input);
         $this->load->model('AuthModel');
         $this->AuthModel->create_user($input);
+        echo "<script>alert('Silahkan masuk dengan menggunakan akun baru anda!');<script>";
         redirect(base_url());
     }
 
     public function logout()
-    { }
+    {
+        $this->session->sess_destroy();
+        redirect(base_url());
+    }
 }
