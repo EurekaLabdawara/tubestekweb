@@ -52,18 +52,22 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 <li class="item1 active"></li>
                 <li class="item2"></li>
                 <li class="item3"></li>
+				<li class="item4"></li>
             </ul>
 
             <!-- The slideshow -->
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="la.jpg" alt="Los Angeles" width="1100" height="500">
+                    <img src="promo2.png" alt="cashback" width="1100" height="500">
                 </div>
                 <div class="carousel-item">
-                    <img src="chicago.jpg" alt="Chicago" width="1100" height="500">
+                    <img src="promo1.png" alt="Chicago" width="1100" height="500">
                 </div>
                 <div class="carousel-item">
-                    <img src="ny.jpg" alt="New York" width="1100" height="500">
+                    <img src="promo1.png" alt="gratis ongkir" width="1100" height="500">
+                </div>
+				<div class="carousel-item">
+                    <img src="promo2.png" alt="New York" width="1100" height="500">
                 </div>
             </div>
 
@@ -138,55 +142,50 @@ defined('BASEPATH') or exit('No direct script access allowed');
         <h2> Custom Baju </h2>
         <div id="BajuSection" class="card-deck">
             <div class="card">
-                <img src="1depan.png" class="card-img-top" alt="Bumper Iphone">
+                <img src="1depan.png" class="card-img-top" alt="Kaos Raglan lengan pendek">
                 <div class="card-body">
-                    <h5 class="card-title">Case Bumper Iphone</h5>
-                    <p class="card-text">Case bumper merupakan case dengan desain simple mengelilingi sisi samping
-                        gadget, sehingga desain asli gadget tetap terlihat.</p>
+                    <h5 class="card-title">Baju Kaos Raglan</h5>
+                    <p class="card-text">Kaos ini memiliki bahan cotton combed yaitu kaos dengan bahan yang adem, tidak panas saat dipakai dan dapat menyerap keringat dengan baik.</p>
                 </div>
                 <div class="card-footer">
                     <a href="#" class="card-link">Yuk Custom..</a>
                 </div>
             </div>
             <div class="card">
-                <img src="2depan.png" class="card-img-top" alt="Wooden Sony">
+                <img src="2depan.png" class="card-img-top" alt="Kaos Raglan lengan panjang">
                 <div class="card-body">
-                    <h5 class="card-title">Case Wooden Sony</h5>
-                    <p class="card-text">Case Wooden merupakan case dari bahan kayu asli yang didalamnya terdapat
-                        bantalan halus untuk melindungi handphone.</p>
+                    <h5 class="card-title">Baju Kaos Raglan</h5>
+                    <p class="card-text">Kaos ini memiliki bahan cotton combed yaitu kaos dengan bahan yang adem, tidak panas saat dipakai dan dapat menyerap keringat dengan baik.</p>
                 </div>
                 <div class="card-footer">
                     <a href="#" class="card-link">Yuk Custom..</a>
                 </div>
             </div>
             <div class="card">
-                <img src="3depan.png" class="card-img-top" alt="Flip lenovo">
+                <img src="3depan.png" class="card-img-top" alt="Kaos Polos">
                 <div class="card-body">
-                    <h5 class="card-title">Case Flip Lenovo</h5>
-                    <p class="card-text">Case Flip merupakan case yang menutup bagian belakang sekaligus bagian depan
-                        sehingga berperan sebagai pelindung layar.</p>
+                    <h5 class="card-title">Baju Kaos Polos</h5>
+                    <p class="card-text">Kaos ini memiliki bahan cotton combed yaitu kaos dengan bahan yang adem, tidak panas saat dipakai dan dapat menyerap keringat dengan baik.</p>
                 </div>
                 <div class="card-footer">
                     <a href="#" class="card-link">Yuk Custom..</a>
                 </div>
             </div>
             <div class="card">
-                <img src="4depan.png" class="card-img-top" alt="Bumper Iphone">
+                <img src="4depan.png" class="card-img-top" alt="Kaos Polos">
                 <div class="card-body">
-                    <h5 class="card-title">Case Bumper Iphone</h5>
-                    <p class="card-text">Case bumper merupakan case dengan desain simple mengelilingi sisi samping
-                        gadget, sehingga desain asli gadget tetap terlihat.</p>
+                    <h5 class="card-title">Baju Kaos Polos</h5>
+                    <p class="card-text">Kaos ini memiliki bahan cotton combed yaitu kaos dengan bahan yang adem, tidak panas saat dipakai dan dapat menyerap keringat dengan baik.</p>
                 </div>
                 <div class="card-footer">
                     <a href="#" class="card-link">Yuk Custom..</a>
                 </div>
             </div>
             <div class="card">
-                <img src="5depan.png" class="card-img-top" alt="Wooden Sony">
+                <img src="5depan.png" class="card-img-top" alt="Kaos V-Neck">
                 <div class="card-body">
-                    <h5 class="card-title">Case Wooden Sony</h5>
-                    <p class="card-text">Case Wooden merupakan case dari bahan kayu asli yang didalamnya terdapat
-                        bantalan halus untuk melindungi handphone.</p>
+                    <h5 class="card-title">baju Kaos V-Neck</h5>
+                    <p class="card-text">Kaos ini memiliki bahan cotton combed yaitu kaos dengan bahan yang adem, tidak panas saat dipakai dan dapat menyerap keringat dengan baik.</p>
                 </div>
                 <div class="card-footer">
                     <a href="#" class="card-link">Yuk Custom..</a>
