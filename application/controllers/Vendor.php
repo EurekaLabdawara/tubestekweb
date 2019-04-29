@@ -29,7 +29,13 @@ class Vendor extends CI_Controller
     {
         //function untuk menmbuat / inisialisasi vendor/toko
 
-
+        $input = html_escape($this->input->post());
+        // print_r($input);
+        $userid = $input['userid'];
+        $this->load->model('VendorModel');
+        $vendorid = $this->VendorModel->create_toko($userid, $input);
+        $this->session->vendorID = $vendorid;
+        redirect(base_url() . 'Vendor/dashboard');
     }
 
     public function Update()

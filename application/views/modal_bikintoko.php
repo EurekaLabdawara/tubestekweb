@@ -14,7 +14,7 @@
                     <form action="<?php echo base_url() ?>Vendor/Create" method="post">
                         <div class="form-group" hidden>
                             <input name="userid" type="text" class="form-control"
-                                value="<?php $this->session->userdata('userID') ?>">
+                                value="<?php echo $this->session->userdata('userID') ?>">
                         </div>
                         <div class="form-group">
                             <label for="input">Nama Toko</label>

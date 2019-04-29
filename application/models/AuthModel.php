@@ -12,7 +12,7 @@ class AuthModel extends CI_Model
 
     public function get_user($email)
     {
-        $this->db->select('email, namaLengkap, username, vendorID, alamat, nohp, profPic');
+        $this->db->select('userID, email, namaLengkap, username, vendorID, alamat, nohp, profPic');
         $query = $this->db->get_where('users', array('email' => $email), 1);
         return $query->result();
     }

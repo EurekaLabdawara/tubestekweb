@@ -58,7 +58,7 @@
                     <a data-toggle="modal" data-target="#ModalBikinToko" class="dropdown-item">Mulai Berjualan</a>
                     <?php
                     } else { ?>
-                    <a href="" class="dropdown-item">Toko Saya</a>
+                    <a href="<?php echo base_url() . 'Vendor/Dashboard' ?>" class="dropdown-item">Toko Saya</a>
                     <?php
                     }
                     ?>
