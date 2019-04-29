@@ -57,13 +57,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
             <!-- The slideshow -->
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="la.jpg" alt="Los Angeles" width="1100" height="500">
+                    <img src="promo2.png" alt="cashback" width="1100" height="500">
                 </div>
                 <div class="carousel-item">
                     <img src="chicago.jpg" alt="Chicago" width="1100" height="500">
                 </div>
                 <div class="carousel-item">
-                    <img src="ny.jpg" alt="New York" width="1100" height="500">
+                    <img src="promo1.png" alt="gratis ongkir" width="1100" height="500">
                 </div>
             </div>
 
