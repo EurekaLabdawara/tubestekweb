@@ -4,10 +4,10 @@
 }
 </style>
 
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #d1ff99;>
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #d1ff99;">
 
-<a class=" navbar-brand" style="background-color:transparent" href="#">
-    <img src="logo.png" class="d-inline-block align-center img-fluid" width="100" height="100" alt="customplace">
+    <a class=" navbar-brand" style="background-color:transparent" href="#">
+        <img src="logo.png" class="d-inline-block align-center img-fluid" width="100" height="100" alt="customplace">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -55,10 +55,10 @@
                     <a href="" class="dropdown-item">Wishlist</a>
                     <?php
                         if ($this->session->userdata('vendorID') === null) { ?>
-                    <a href="" class="dropdown-item">Mulai Berjualan</a>
+                    <a data-toggle="modal" data-target="#ModalBikinToko" class="dropdown-item">Mulai Berjualan</a>
                     <?php
                     } else { ?>
-                    <a href="" class="dropdown-item">Toko Saya</a>
+                    <a href="<?php echo base_url() . 'Vendor/Dashboard' ?>" class="dropdown-item">Toko Saya</a>
                     <?php
                     }
                     ?>

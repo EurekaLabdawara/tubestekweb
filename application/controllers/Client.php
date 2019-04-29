@@ -26,7 +26,7 @@ class Client extends CI_Controller
 
     public function UserSettings()
     {
-        //function untuk menampilkan user settings
+        $this->load->view('Client/usersettings');
     }
 
     public function SaveUserSettings()
@@ -34,9 +34,14 @@ class Client extends CI_Controller
         //function untuk mengupdate perubahan pada user settings
     }
 
+    public function Wishlist()
+    {
+        $this->load->view('Client/wishlist');
+    }
+
     public function Tagihan()
     {
-        //function untuk melihat list tagihan
+        $this->load->view('Client/tagihan');
     }
 
     public function DetilTagihan()
@@ -46,11 +51,11 @@ class Client extends CI_Controller
 
     public function Keranjang()
     {
-        //function untuk melihat keranjang / list barang pesanan
+        $this->load->view('Client/keranjang');
     }
 
-    public function Transaksi()
+    public function Pembelian()
     {
-        //function untuk melihat list history transaksi
+        $this->load->view('Client/pembelian');
     }
 }
