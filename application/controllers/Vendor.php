@@ -22,7 +22,7 @@ class Vendor extends CI_Controller
     public function Dashboard()
     {
         //function untuk menampilkan dashboard vendor / toko
-        $this->load->view('Vendor/dashboard');
+        $this->load->view('vendor/navbarvendor');
     }
 
     public function ViewCreateVendor()
