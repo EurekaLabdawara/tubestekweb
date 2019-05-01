@@ -58,7 +58,13 @@ class Client extends CI_Controller
     {
         $this->load->view('Client/pembelian');
     }
-	public function Konfirmasi()
+
+    public function Checkout()
+    {
+        $this->load->view('Client/checkout');
+    }
+
+    public function Konfirmasi()
     {
         $this->load->view('Client/konfirmasi_pembayaran');
     }
