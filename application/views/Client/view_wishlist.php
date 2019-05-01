@@ -15,22 +15,23 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <?php
-  include_once("navbar.php");
+  $this->load->view("navbar");
   ?>
-  <div class=row>
-  <div class="container mt-3">
-  <form class="form-inline mt-4 col-12 col-md-9 col-xl-8 py-md-3 pl-md-5" style="width:40%">
-	  <div class="input-group mb-3">
-	  <input type="text" class="form-control" placeholder="Search Wishlist" aria-label="Search Wishlist" aria-describedby="button-addon2">
-	  <div class="input-group-append">
-		<button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
-	  </div>
-	  
-	  <img src="logo.png" alt="customplace" class="img-thumbnail">
-	  <p>
-	  Daftar produk yang anda inginkan ada dilaman ini.</p>
-	  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Cari Produk</button>
+  <h2 class="text mt-3 mx-5">Wishlist Kamu</h2>
+  <div id="wishlist" class="card-deck mt-3 mx-3">
+  <div class="card col-2">
+  <img src="<?php echo base_url() ?>" class="card-img-top"
+        alt="Bumper Iphone">
+        <div class="card-body">
+	<h5 class="card-title">Case Bumper Iphone</h5>
+    <p class="card-text">Rp.100.000</p>
+		</div>
+        <div class="card-footer">
+		<div class="btn-beli">
+			<button type="button" class="btn btn-danger">Beli</button>
+		</div>
+                  
         </div>
-		</form>
-		</div>
-		</div>
+   </div>
+   
+   </div>

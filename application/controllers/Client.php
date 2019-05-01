@@ -36,7 +36,7 @@ class Client extends CI_Controller
 
     public function Wishlist()
     {
-        $this->load->view('Client/wishlist');
+        $this->load->view('Client/view_wishlist');
     }
 
     public function Tagihan()
