@@ -51,6 +51,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
 											</button>
 										</div>
 									</div>
+									
+										<a class="btn btn-outline-success my-2 my-sm-0 mx-1" href="#">
+											<i class="fas fa-heart "> Wishlist</i>
+										</a>
 				<div class="btn-beli">
 				<button type="button" class="btn btn-danger">Beli</button>
 			  </div>
