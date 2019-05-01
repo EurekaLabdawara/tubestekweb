@@ -55,14 +55,15 @@ a:focus {
 }
 
 #sidebar ul li a:hover {
-    color: #7386D5;
-    background: #fff;
+    color: #fff;
+    background: #6d7fcc;
+
 }
 
 #sidebar ul li.active>a,
 a[aria-expanded="true"] {
-    color: #fff;
-    background: #6d7fcc;
+    color: #7386D5;
+    background: #fff;
 }
 
 ul ul a {
