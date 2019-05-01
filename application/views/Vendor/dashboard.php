@@ -47,17 +47,15 @@ defined('BASEPATH') or exit('No direct script access allowed');
             <div class="gray-bg dashbard-1">
                 <div class="wrapper-content">
                     <div class="row card m-2">
-                        <div style="width: 100%;">
-                            <center>
-                                <h2><b>Selamat datang di toko anda!</b></h2>
-                            </center>
-                        </div>
+
+                        <img src="<?php echo base_url(); ?>IMG/vendordefaultcover.jpg" class="img-fluid" width="100%"
+                            height="auto" alt="shopcover">
                     </div>
 
-                    <div class="row card m-2">
-
-                        <img src="<?php echo base_url(); ?>IMG/vendordefaultcover.jpg" class="img-fluid" width="100"
-                            height="auto" alt="shopcover">
+                    <div class="row card m-2 p-2">
+                        <h3>Best Part Store</h3>
+                        <br>
+                        Kami menjual berbagai macam model casing HP yang dapat anda kustom!
                     </div>
 
                 </div>

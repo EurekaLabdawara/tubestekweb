@@ -54,7 +54,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                         </div>
                     </div>
 
-                    <div class="row card m-2">
+                    <div class="row card m-2 p-2">
                         <div style="width: 100%;">
                             <center>
                                 <p><b>Anda Belum Menambahkan Item</b></p>

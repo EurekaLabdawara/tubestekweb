@@ -74,7 +74,7 @@ ul ul a {
 
 <div class="sidebar-header">
     <a href="<?php echo base_url() ?>">
-        <h3><i class="fas fa-door-closed"></i> Kembali</h3>
+        <h4><i class="fas fa-door-closed"></i> Kembali</h4>
     </a>
 </div>
 
@@ -87,5 +87,8 @@ ul ul a {
     </li>
     <li>
         <a href="<?php echo base_url() ?>vendor/ViewPesanan">Pesanan</a>
+    </li>
+    <li>
+        <a href="<?php echo base_url() ?>vendor/Pengaturan">Pengaturan Toko</a>
     </li>
 </ul>
