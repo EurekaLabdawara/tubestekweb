@@ -17,6 +17,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
   </head>
 
 <body>
+<?php $this->load->view('navbar');?>
 <div class="wrapper">
 <div class="mt-3 col-12 ">
 	<h1>Checkout</h1>
