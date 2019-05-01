@@ -4,10 +4,10 @@
 }
 </style>
 
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #d1ff99;">
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #d1ff99;>
 
     <a class=" navbar-brand" style="background-color:transparent" href="#">
-        <img src="<?php echo base_url() ?>IMG/logo.png" class="d-inline-block align-center img-fluid" width="100"
+        <img src="<?php echo base_url('IMG/logo.png') ?>" class="d-inline-block align-center img-fluid" width="100"
             height="100" alt="customplace">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"

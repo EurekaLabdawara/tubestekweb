@@ -42,7 +42,6 @@ class Auth extends CI_Controller
                 print_r("Anda telah masuk");
                 $user = $this->AuthModel->get_user($email)[0];
                 // print_r($user);
-                $this->session->userID = $user->userID;
                 $this->session->email = $user->email;
                 $this->session->namaLengkap = $user->namaLengkap;
                 $this->session->username = $user->username;
