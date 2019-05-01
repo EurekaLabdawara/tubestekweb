@@ -55,9 +55,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     </div>
 
                     <div class="row card m-2">
-                        <div style="width: 100%;">
-                            <img src="http://picsum.photos/1081/200?grayscale&blur=2">
-                        </div>
+
+                        <img src="<?php echo base_url(); ?>IMG/vendordefaultcover.jpg" class="img-fluid" width="100"
+                            height="auto" alt="shopcover">
                     </div>
 
                 </div>
