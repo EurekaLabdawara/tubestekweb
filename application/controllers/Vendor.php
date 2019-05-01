@@ -22,7 +22,7 @@ class Vendor extends CI_Controller
     public function Dashboard()
     {
         //function untuk menampilkan dashboard vendor / toko
-        $this->load->view('vendor/navbarvendor');
+        $this->load->view('vendor/dashboard');
     }
 
     public function Create()
@@ -51,5 +51,13 @@ class Vendor extends CI_Controller
     public function UpdateStatusPesanan()
     {
         //function untuk mengupdate status pesanan
+    }
+    public function ViewMyItem()
+    {
+        $this->load->view('vendor/item_saya');
+    }
+    public function ViewPesanan()
+    {
+        $this->load->view('vendor/pesanan');
     }
 }

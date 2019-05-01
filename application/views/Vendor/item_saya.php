@@ -49,14 +49,16 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     <div class="row card m-2">
                         <div style="width: 100%;">
                             <center>
-                                <h2><b>Selamat datang di toko anda!</b></h2>
+                                <h2><b>Item Anda</b></h2>
                             </center>
                         </div>
                     </div>
 
                     <div class="row card m-2">
                         <div style="width: 100%;">
-                            <img src="http://picsum.photos/1081/200?grayscale&blur=2">
+                            <center>
+                                <p><b>Anda Belum Menambahkan Item</b></p>
+                            </center>
                         </div>
                     </div>
 
