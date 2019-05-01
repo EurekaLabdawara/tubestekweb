@@ -59,4 +59,8 @@ class Vendor extends CI_Controller
     {
         $this->load->view('vendor/pesanan');
     }
+	public function Pengaturan()
+    {
+        $this->load->view('vendor/pengaturan');
+    }
 }

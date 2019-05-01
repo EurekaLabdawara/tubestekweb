@@ -29,6 +29,11 @@ class Barang extends CI_Controller
 		$this->load->view('view_item');
         //function untuk mendapatkan barang dengan filter tertentu
     }
+	public function Search()
+    {
+		$this->load->view('view_search');
+        //function untuk mendapatkan barang dengan filter tertentu
+    }
 
     public function Create()
     {
