@@ -26,7 +26,7 @@ class Client extends CI_Controller
 
     public function UserSettings()
     {
-        $this->load->view('Client/usersettings');
+        $this->load->view('Client/pengaturan');
     }
 
     public function SaveUserSettings()

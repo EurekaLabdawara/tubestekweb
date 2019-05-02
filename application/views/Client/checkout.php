@@ -140,12 +140,36 @@ defined('BASEPATH') or exit('No direct script access allowed');
                         <div class="form-group">
                             <label for="exampleInputEmail1">Label Alamat
 
-                            </label>
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control" placeholder="Masukkan label"
-                                    aria-label="Masukkan label" aria-describedby="button-addon2">
-                                <div class="input-group-append">
-                                    <button class="btn btn-outline-secondary" type="button" id="button-addon2">
+</div>
+<div class="row">
+<div class="col-6 left-basket-container" >
+  <div class="col px-md-5"><div class="p-3 border bg-light">
+  <h5> Pilih Alamat Pengiriman
+  <button type="submit" class="btn btn-primary" style="float:right">Batal</button></h5>
+  <hr class="my-4">
+  <h7> alamat 1<button class="btn btn-outline-success my-2 my-sm-0" type="submit"style="float:right">Pilih Alamat
+  </button></h7> 
+  <hr class="my-4">
+  <h7> alamat 2<button class="btn btn-outline-success my-2 my-sm-0" type="submit"style="float:right">Pilih Alamat</button></h7>
+  <hr class="my-4">
+  <h7> alamat 3<button class="btn btn-outline-success my-2 my-sm-0" type="submit"style="float:right">Pilih Alamat</button></h7>   
+  </div>
+</div>
+</div></div>
+<br>
+<br>
+
+
+<div class="row">
+<div class="col-6 left-basket-container" >
+	<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Gunakan Alamat Baru</label>
+	<div class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="Masukkan label" aria-label="Masukkan label" aria-describedby="button-addon2">
+  <div class="input-group-append">
+    <button class="btn btn-outline-secondary" type="button" id="button-addon2">
+	       
 
 
                                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
