@@ -64,6 +64,17 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             </center>
                         </div>
                     </div>
+					
+                    <div class="row card m-2 p-2">
+                        <div style="width: 100%;">
+                            <img src="https://picsum.photos/id/237/20000/30000" class="card-img-top" alt="https://picsum.photos/20000">
+	                          <p><b>Nama
+							  <button type="submit" class="btn btn-primary">Detail</button>
+							  <button type="submit" class="btn btn-primary">Delete</button>
+							  </b></p>
+								
+                        </div>
+                    </div>					
 
 
                     <div class="row card m-2" id="divadditem">
