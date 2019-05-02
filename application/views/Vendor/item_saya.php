@@ -9,7 +9,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="<?php echo base_url(); ?> assets/css/button_inverse.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -76,12 +75,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     </div>
 
                     <div class="row card m-2 p-2" id="formadditem">
-                        <form class="form-group" action="">
+                        <form class="form-group" action="<?php echo base_url(); ?>Barang/Create" method="post">
                             <div class="form-group row ">
-                                <label for="inputnamatoko" class="col-sm-2 col-form-label">Nama Item</label>
+                                <label for="inputnamaitem" class="col-sm-2 col-form-label">Nama Item</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="inputnamatoko"
-                                        placeholder="Masukan nama produk baru anda">
+                                    <input type="text" id="inputnamaitem" class="form-control" name="namaBarang"
+                                        placeholder="Masukan nama produk baru anda" required>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -90,44 +89,48 @@ defined('BASEPATH') or exit('No direct script access allowed');
                                     aria-expanded="false">
                                     Pilih Kategori Item-mu
                                 </button>
-                                <span class="badge badge-pill badge-primary">Primary</span>
+                                <input type="text" name="namaKategori" id="inputkategori" hidden required>
+                                <span class="badge badge-pill badge-primary" id="badgekategori">Primary</span>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" id="addnewcategory">Tambah Kategori Baru</a>
+                                    <a class="dropdown-item dropdownkategori" onclick="kategori(this)">Casing HP</a>
+                                    <a class="dropdown-item dropdownkategori" onclick="kategori(this)">Baju
+                                        action</a>
+                                    <a class="dropdown-item" id="addnewcategory">Tambah Kategori
+                                        Baru</a>
                                 </div>
-                                <div class="input-group mb-3" id="newcategory">
-                                    <input type="text" class="form-control" placeholder="Kategori Baru"
-                                        aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                <div class="input-group mb-3" id="newcategoryform">
+                                    <input type="text" class="form-control" id="newcategoryinput"
+                                        placeholder="Kategori Baru" aria-label="Item New Category"
+                                        aria-describedby="basic-addon2">
                                     <div class="input-group-append">
-                                        <button class="btn btn-outline-secondary" type="submit"><i
-                                                class="fas fa-plus-circle"></i></button>
-                                        <button class="btn btn-outline-secondary" id="cancelnewcategory">Batal</button>
+                                        <a class="btn btn-outline-secondary" id="newcategory"><i
+                                                class="fas fa-plus-circle"></i></a>
+                                        <a class="btn btn-outline-secondary" id="cancelnewcategory">Batal</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="exampleFormControlTextarea1">Deskripsi</label>
                                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                                    placeholder="Deskripsikan produk anda"></textarea>
+                                    placeholder="Deskripsikan produk anda" required></textarea>
                             </div>
                             <label for="hargasatuan">Harga Satuan</label>
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend" id="hargasatuan">
                                     <span class="input-group-text">Rp</span>
                                 </div>
-                                <input type="text" class="form-control" aria-label="Harga dalam Rupiah">
+                                <input type="text" class="form-control" aria-label="Harga dalam Rupiah" required>
                             </div>
                             <div class="form-group">
                                 <label>Kustom Item </label>
                                 <div class="btn-group btn-group-toggle float-right" data-toggle="buttons">
                                     <label class="btn btn-outline-danger active" id="notcustom">
-                                        <input type="radio" name="options" checked>
+                                        <input type="radio" name="customable" value="no" checked>
                                         Tidak
                                         Dapat Dikustom
                                     </label>
                                     <label class="btn btn-outline-success" id="custom">
-                                        <input type="radio" name="options"> Dapat
+                                        <input type="radio" name="customable" value="yes"> Dapat
                                         Dikustom
                                     </label>
                                 </div>
@@ -135,35 +138,48 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
                             <div id="customframeimage" class="form-group">
                                 <img id="frameimage" src="#" alt="your item frame image" />
-                                <label for="exampleFormControlFile1">Item Frame Picture</label>
-                                <input type="file" class="form-control-file" id="exampleFormControlFile1"
+                                <label for="fileframe">Item Frame Picture</label>
+                                <input name="fileframepicture" type="file" class="form-control-file" id="fileframe"
                                     onchange="readURL1(this);">
                             </div>
 
                             <img id="coverimage" src="#" alt="your item cover image" />
 
                             <div class="form-group">
-                                <label for="exampleFormControlFile1">Item Cover Picture(s)</label>
-                                <input type="file" class="form-control-file" id="exampleFormControlFile1" onchange="
-                                    readURL2(this);">
+                                <label for="filecover">Item Cover Picture(s)</label>
+                                <input name="filecoverpicture" type="file" class="form-control-file" id="filecover"
+                                    onchange="
+                                    readURL2(this);" required>
                             </div>
 
-                            <img id="presetimage" src="#" alt="your item preset image" />
-
                             <div class="form-group">
+                                <label>Mempunyai Preset </label>
+                                <div class="btn-group btn-group-toggle float-right" data-toggle="buttons">
+                                    <label class="btn btn-outline-danger active" id="notpreset">
+                                        <input type="radio" name="preset" value="no" checked>
+                                        Tidak
+                                        Ada Preset
+                                    </label>
+                                    <label class="btn btn-outline-success" id="preset">
+                                        <input type="radio" name="preset" value="yes"> Mempunyai Preset
+                                    </label>
+                                </div>
+                            </div>
+                            <img id="presetimage" src="#" alt="your item preset image" />
+                            <div class="form-group" id="presetimageform">
                                 <label for="namapreset">Item Preset</label>
-                                <input type="text" class="form-control" id="namapreset"
+                                <input type="text" class="form-control" id="namapreset" name="namaPreset"
                                     placeholder="Nama Preset (Pilihan Default)">
                                 <br>
-                                <label for="exampleFormControlFile1">Item Preset Picture(s)</label>
-                                <input type="file" class="form-control-file" id="exampleFormControlFile1"
+                                <label for="filepreset">Item Preset Picture(s)</label>
+                                <input name="filepresetpicture" type="file" class="form-control-file" id="filepreset"
                                     onchange="readURL3(this);">
                             </div>
 
                             <button type=" submit" class="btn btn-primary mx-1" style="float:right">Simpan</button>
                             <button type="reset" class="btn btn-warning mx-1"
                                 style="color:white;float:right">Reset</button>
-                            <button id="btncanceladd" class="btn btn-danger mx-1" style="float:right">Batal</button>
+                            <a id="btncanceladd" class="btn btn-danger mx-1" style="float:right; color:white">Batal</a>
                         </form>
                     </div>
                 </div>
@@ -178,7 +194,9 @@ $('#coverimage').hide();
 $('#presetimage').hide();
 $('#formadditem').hide();
 $('#customframeimage').hide();
-$('#newcategory').hide();
+$('#presetimageform').hide();
+$('#badgekategori').hide();
+$('#newcategoryform').hide();
 
 $('#divadditem').click(function() {
     $('#formadditem').toggle();
@@ -191,18 +209,46 @@ $('#btncanceladd').click(function() {
 
 $('#custom').click(function() {
     $('#customframeimage').show();
+    $('#fileframe').attr('required', true);
 });
 $('#notcustom').click(function() {
     $('#customframeimage').hide();
+    $('#fileframe').removeAttr('required');
+});
+
+$('#preset').click(function() {
+    $('#presetimageform').show();
+    $('#namapreset').attr('required', true);
+    $('#filepreset').attr('required', true);
+});
+$('#notpreset').click(function() {
+    $('#presetimageform').hide();
+    $('#filepreset').removeAttr('required');
+    $('#namapreset').removeAttr('required');
 });
 
 $('#addnewcategory').click(function() {
-    $('#newcategory').show();
+    $('#newcategoryform').show();
 });
 
 $('#cancelnewcategory').click(function() {
-    $('#newcategory').hide();
+    $('#newcategoryform').hide();
 });
+
+$('#newcategory').click(function() {
+    var kategori = $('#newcategoryinput').val();
+    document.getElementById('badgekategori').innerHTML = kategori;
+    document.getElementById('inputkategori').value = kategori;
+    $('#newcategoryform').hide();
+    $('#badgekategori').show();
+})
+
+function kategori(input) {
+    var kategori = input.innerHTML;
+    document.getElementById('badgekategori').innerHTML = kategori;
+    $('#badgekategori').show();
+    document.getElementById('inputkategori').value = kategori;
+}
 
 function readURL1(input) {
     if (input.files && input.files[0]) {

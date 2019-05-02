@@ -26,18 +26,20 @@ class Barang extends CI_Controller
 
     public function Get()
     {
-		$this->load->view('view_item');
+        $this->load->view('view_item');
         //function untuk mendapatkan barang dengan filter tertentu
     }
-	public function Search()
+    public function Search()
     {
-		$this->load->view('view_search');
+        $this->load->view('view_search');
         //function untuk mendapatkan barang dengan filter tertentu
     }
 
     public function Create()
     {
         //function untuk membuat barang (di toko)
+        $input = html_escape($this->input->post());
+        print_r($input);
     }
     public function Update()
     {
