@@ -46,10 +46,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
         <div id="content" style="width: 100%;" class="m-2">
             <div class="gray-bg dashbard-1">
                 <div class="wrapper-content">
-                    <div class="row card m-2">
+                    <div class="row card m-2 overflow-hidden" width="100%" height="100">
 
-                        <img src="<?php echo base_url(); ?>IMG/vendordefaultcover.jpg" class="img-fluid" width="100%"
-                            height="auto" alt="shopcover">
+                        <img src="<?php echo base_url(); ?>IMG/vendordefaultcover.jpg" class="img-fluid"
+                            alt="shopcover">
                     </div>
 
                     <div class="row card m-2 p-2">

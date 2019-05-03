@@ -78,18 +78,34 @@ ul ul a {
         <h4><i class="fas fa-door-closed"></i> Kembali</h4>
     </a>
 </div>
-
+<?php $link = $this->uri->segment(2) ?>
 <ul class="list-unstyled components">
-    <li class="active">
-        <a href="<?php echo base_url() ?>vendor/dashboard">Dashboard</a>
+    <?php if ($link === "dashboard" || $link === "Dashboard") {
+        echo '<li class="active">';
+    } else {
+        echo '<li>';
+    } ?>
+    <a href="<?php echo base_url() ?>vendor/dashboard">Dashboard</a>
     </li>
-    <li>
-        <a href="<?php echo base_url() ?>vendor/ViewMyItem">Item Saya</a>
+    <?php if ($link === "ViewMyItem") {
+        echo '<li class="active">';
+    } else {
+        echo '<li>';
+    } ?>
+    <a href="<?php echo base_url() ?>vendor/ViewMyItem">Item Saya</a>
     </li>
-    <li>
-        <a href="<?php echo base_url() ?>vendor/ViewPesanan">Pesanan</a>
+    <?php if ($link === "ViewPesanan") {
+        echo '<li class="active">';
+    } else {
+        echo '<li>';
+    } ?>
+    <a href="<?php echo base_url() ?>vendor/ViewPesanan">Pesanan</a>
     </li>
-    <li>
-        <a href="<?php echo base_url() ?>vendor/Pengaturan">Pengaturan Toko</a>
+    <?php if ($link === "Pengaturan") {
+        echo '<li class="active">';
+    } else {
+        echo '<li>';
+    } ?>
+    <a href="<?php echo base_url() ?>vendor/Pengaturan">Pengaturan Toko</a>
     </li>
 </ul>

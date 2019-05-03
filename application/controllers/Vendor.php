@@ -77,7 +77,7 @@ class Vendor extends CI_Controller
             'itemFrameImage' => $itemFrameImage
         );
 
-        print_r($itemData);
+        // print_r($itemData);
         $this->load->view('vendor/item_saya', $itemData);
     }
     public function ViewPesanan()
