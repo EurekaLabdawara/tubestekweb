@@ -4,9 +4,9 @@
 }
 </style>
 
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #d1ff99;>
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #d1ff99;">
 
-    <a class=" navbar-brand" style="background-color:transparent" href="#">
+    <a class="navbar-brand" style="background-color:transparent" href="<?php echo base_url() ?>">
         <img src="<?php echo base_url('IMG/logo.png') ?>" class="d-inline-block align-center img-fluid" width="100"
             height="100" alt="customplace">
     </a>
@@ -35,7 +35,7 @@
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" style="width:80%">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
-    <a class="btn btn-outline-success my-2 my-sm-0 mx-1" href="#">
+    <a class="btn btn-outline-success my-2 my-sm-0 mx-1" href="<?php echo base_url() ?>Client/Keranjang">
         <i class="fas fa-shopping-cart"></i>
     </a>
     <?php
@@ -51,8 +51,8 @@
                 <?php echo $this->session->userdata('namaLengkap') ?>
             </a>
             <div class="dropdown-menu" aria-labelledby="rightnavbarDropdown">
-                <a href="" class="dropdown-item">Pembelian</a>
-                <a href="" class="dropdown-item">Wishlist</a>
+                <a href="<?php echo base_url() ?>Client/Pembelian" class="dropdown-item">Pembelian</a>
+                <a href="<?php echo base_url() ?>Client/Wishlist" class="dropdown-item">Wishlist</a>
                 <?php
                     if ($this->session->userdata('vendorID') === null) { ?>
                 <a data-toggle="modal" data-target="#ModalBikinToko" class="dropdown-item">Mulai Berjualan</a>
@@ -62,7 +62,7 @@
                 <?php
                 }
                 ?>
-                <a href="" class="dropdown-item">Pengaturan</a>
+                <a href="<?php echo base_url() ?>Client/UserSettings" class="dropdown-item">Pengaturan</a>
                 <a href="<?php echo base_url() ?>Auth/logout" class="dropdown-item">Keluar</a>
             </div>
         </li>
