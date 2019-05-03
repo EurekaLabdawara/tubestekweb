@@ -56,7 +56,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             </center>
                         </div>
                     </div>
-
+                    <?php if ($items === null) {
+                        ?>
                     <div class="row card m-2 p-2">
                         <div style="width: 100%;">
                             <center>
@@ -64,17 +65,32 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             </center>
                         </div>
                     </div>
-					
-                    <div class="row card m-2 p-2">
-                        <div style="width: 100%;">
-                            <img src="https://picsum.photos/id/237/20000/30000" class="card-img-top" alt="https://picsum.photos/20000">
-	                          <p><b>Nama
-							  <button type="submit" class="btn btn-primary">Detail</button>
-							  <button type="submit" class="btn btn-primary">Delete</button>
-							  </b></p>
-								
+                    <?php
+                } else {
+                    foreach ($items as $item) {
+                        ?>
+                    <div class="row card m-2">
+                        <div class="row p-1">
+                            <div class="col-md-2 px-3">
+                                <img src="<?php echo base_url() . 'IMG/vendors_item/' . $this->session->userdata('vendorID') . '/' . $itemCoverImage[$item->idBarang][0]->filename ?>"
+                                    class="img-fluid" alt="<?php echo $items[0]->namaBarang ?>">
+                            </div>
+                            <div class="col-lg-7 py-4 px-3">
+                                <h5><b><?php echo $items[0]->namaBarang ?></b></h5>
+                                <p><b>Stok: <?php echo $items[0]->stok ?></b></p>
+                            </div>
+                            <div class="col-md-3 py-5">
+                                <a href="" class="btn btn-danger m-1 float-right">Delete</a>
+                                <a href="" class="btn btn-primary  m-1 float-right">Detail</a>
+                            </div>
                         </div>
-                    </div>					
+                    </div>
+                    <?php
+                    }
+                }
+                ?>
+
+
 
 
                     <div class="row card m-2" id="divadditem">

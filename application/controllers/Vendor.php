@@ -62,7 +62,23 @@ class Vendor extends CI_Controller
     }
     public function ViewMyItem()
     {
-        $this->load->view('vendor/item_saya');
+        $this->load->model('ItemModel');
+        $items = $this->ItemModel->search_item_byVendor($this->session->userdata('vendorID'));
+        foreach ($items as $item) {
+            $itemCoverImage[$item->idBarang] = $this->ItemModel->get_item_coverimages($item->idBarang);
+            $itemPresetImage[$item->idBarang] = $this->ItemModel->get_item_presetimages($item->idBarang);
+            $itemFrameImage[$item->idBarang] = $this->ItemModel->get_item_frameimages($item->idBarang);
+        }
+
+        $itemData = (object)array(
+            'items' => $items,
+            'itemCoverImage' => $itemCoverImage,
+            'itemPresetImage' => $itemPresetImage,
+            'itemFrameImage' => $itemFrameImage
+        );
+
+        print_r($itemData);
+        $this->load->view('vendor/item_saya', $itemData);
     }
     public function ViewPesanan()
     {
