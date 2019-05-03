@@ -122,8 +122,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             </div>
                             <div class="form-group">
                                 <label for="exampleFormControlTextarea1">Deskripsi</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                                    placeholder="Deskripsikan produk anda" required></textarea>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" name="deskripsi"
+                                    rows="3" placeholder="Deskripsikan produk anda" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputjumlahstok">Jumlah Stok</label>
+                                <input type="number" class="form-control" id="inputjumlahstok" name="stok" required>
                             </div>
                             <label for="hargasatuan">Harga Satuan</label>
                             <div class="input-group mb-3">

@@ -39,8 +39,15 @@ class Barang extends CI_Controller
     {
         //function untuk membuat barang (di toko)
         $input = html_escape($this->input->post());
+        $this->load->model('ItemModel');
         print_r($input);
     }
+
+    public function StartCustom()
+    {
+        $this->load->view('kustom_barang');
+    }
+
     public function Update()
     {
         //function untuk mengupdate barang (di toko)
