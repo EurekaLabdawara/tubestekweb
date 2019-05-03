@@ -40,6 +40,23 @@ defined('BASEPATH') or exit('No direct script access allowed');
 </head>
 
 <body>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <form action="" method="post">
+            <div class="row">
+                <label class="col-8"><strong>Perhatian!</strong> Aksi ini adalah aksi destruktif yang tidak bisa anda
+                    putar ulang.<br>
+                    Pastikan barang yang anda akan hapus tidak sedang di pesan oleh customer anda!
+                    Konfirmasi?</label>
+                <input id="inputdeleteitem" type="text" name="idBarang" value="" hidden>
+                <button type="button" class="col-2 btn btn-danger">
+                    Konfirmasi Hapus Item
+                </button>
+            </div>
+        </form>
+        <button type="button" class="close" onclick="$('.alert').hide()" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
     <div class="wrapper">
         <nav id="sidebar">
             <?php
@@ -73,14 +90,15 @@ defined('BASEPATH') or exit('No direct script access allowed');
                         <div class="row p-1">
                             <div class="col-md-2 px-3">
                                 <img src="<?php echo base_url() . 'IMG/vendors_item/' . $this->session->userdata('vendorID') . '/' . $itemCoverImage[$item->idBarang][0]->filename ?>"
-                                    class="img-fluid" alt="<?php echo $items[0]->namaBarang ?>">
+                                    class="img-fluid" alt="<?php echo $item->namaBarang ?>">
                             </div>
                             <div class="col-lg-7 py-4 px-3">
-                                <h5><b><?php echo $items[0]->namaBarang ?></b></h5>
-                                <p><b>Stok: <?php echo $items[0]->stok ?></b></p>
+                                <h5><b><?php echo $item->namaBarang ?></b></h5>
+                                <p><b>Stok: <?php echo $item->stok ?></b></p>
                             </div>
                             <div class="col-md-3 py-5">
-                                <a href="" class="btn btn-danger m-1 float-right">Delete</a>
+                                <a style="color:white" onclick="deleteitem(<?php echo $item->idBarang ?>)"
+                                    class="btn btn-danger m-1 float-right">Delete</a>
                                 <a href="" class="btn btn-primary  m-1 float-right">Detail</a>
                             </div>
                         </div>
@@ -228,6 +246,7 @@ $('#customframeimage').hide();
 $('#presetimageform').hide();
 $('#badgekategori').hide();
 $('#newcategoryform').hide();
+$('.alert').hide();
 
 $('#divadditem').click(function() {
     $('#formadditem').toggle();
@@ -273,6 +292,12 @@ $('#newcategory').click(function() {
     $('#newcategoryform').hide();
     $('#badgekategori').show();
 })
+
+function deleteitem(idBarang) {
+    // console.log(idBarang);
+    $('.alert').show();
+    $('#inputdeleteitem').val(idBarang);
+}
 
 function kategori(input) {
     var kategori = input.innerHTML;
