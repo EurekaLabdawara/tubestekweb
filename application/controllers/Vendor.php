@@ -37,6 +37,7 @@ class Vendor extends CI_Controller
         // print_r($input);
         $this->load->model('VendorModel');
         $this->session->vendorID = $this->VendorModel->create_toko($input['userID'], $input);
+        $this->session->toko = $this->VendorModel->get_toko($this->session->vendorID);
         echo "<script>
         var r = confirm('Toko Berhasil dibuat! Silahkan atur ulang toko anda pada menu Toko Saya');
         if (r == true) {

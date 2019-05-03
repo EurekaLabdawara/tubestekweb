@@ -47,6 +47,10 @@ class Auth extends CI_Controller
                 $this->session->namaLengkap = $user->namaLengkap;
                 $this->session->username = $user->username;
                 $this->session->vendorID = $user->vendorID;
+                if ($user->vendorID !== null) {
+                    $this->load->model('VendorModel');
+                    $this->session->toko = $this->VendorModel->get_toko($user->vendorID);
+                }
                 $this->session->alamat = $user->alamat;
                 $this->session->nohp = $user->nohp;
                 $this->session->profPic = $user->profPic;

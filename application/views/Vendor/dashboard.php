@@ -53,9 +53,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     </div>
 
                     <div class="row card m-2 p-2">
-                        <h3>Best Part Store</h3>
+                        <h3><?php echo $this->session->userdata('toko')[0]->namaToko ?></h3>
                         <br>
-                        Kami menjual berbagai macam model casing HP yang dapat anda kustom!
+                        <?php echo $this->session->userdata('toko')[0]->deskripsi ?>
                     </div>
 
                 </div>
