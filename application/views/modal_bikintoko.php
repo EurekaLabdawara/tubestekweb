@@ -13,7 +13,7 @@
                 <div id="masuk">
                     <form action="<?php echo base_url() ?>Vendor/Create" method="post">
                         <div class="form-group" hidden>
-                            <input name="userid" type="text" class="form-control"
+                            <input name="userID" type="text" class="form-control"
                                 value="<?php echo $this->session->userdata('userID') ?>">
                         </div>
                         <div class="form-group">

@@ -33,8 +33,16 @@ class Vendor extends CI_Controller
     public function Create()
     {
         //function untuk menmbuat / inisialisasi vendor/toko
-
-
+        $input = html_escape($this->input->post());
+        // print_r($input);
+        $this->load->model('VendorModel');
+        $this->session->vendorID = $this->VendorModel->create_toko($input['userID'], $input);
+        echo "<script>
+        var r = confirm('Toko Berhasil dibuat! Silahkan atur ulang toko anda pada menu Toko Saya');
+        if (r == true) {
+            window.location.assign('" . base_url() . "');
+        }
+        </script>";
     }
 
     public function Update()
@@ -59,7 +67,7 @@ class Vendor extends CI_Controller
     {
         $this->load->view('vendor/pesanan');
     }
-	public function Pengaturan()
+    public function Pengaturan()
     {
         $this->load->view('vendor/pengaturan');
     }
